@@ -309,8 +309,8 @@ public class EmbeddedSQL {
 
    public static void Query6(EmbeddedSQL esql){
       try{
-         String query = "SELECT S.address FROM suppliers S, parts P, catalog C WHERE C.pid = P.pid AND S.sid = C.sid AND P.pname = '";
-         System.out.print("\tEnter part: $");
+         String query = "SELECT DISTINCT S.address FROM suppliers S, parts P, catalog C WHERE C.pid = P.pid AND S.sid = C.sid AND P.pname = '";
+         System.out.print("\tEnter part name: ");
          String input = in.readLine() + "'";
          query += input;
 
